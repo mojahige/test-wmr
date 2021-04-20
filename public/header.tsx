@@ -1,6 +1,6 @@
 import { useLocation } from 'preact-iso/router';
 
-export default function Header() {
+export default function Header(): JSX.Element {
   const { url } = useLocation();
   return (
     <header>

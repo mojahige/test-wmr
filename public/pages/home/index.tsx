@@ -1,7 +1,7 @@
 import styles from './style.module.css';
 import { useState } from 'preact/hooks';
 
-export default function Home() {
+export default function Home(): JSX.Element {
   const [count, setCount] = useState(0);
 
   return (

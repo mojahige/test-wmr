@@ -5,9 +5,11 @@ import Home from './pages/home/index.js';
 import NotFound from './pages/_404.js';
 import Header from './header.js';
 
+import type { PrerenderResult } from 'preact-iso/prerender';
+
 const About = lazy(() => import('./pages/about/index.js'));
 
-export function App() {
+export function App(): JSX.Element {
   return (
     <LocationProvider>
       <div class="app">
@@ -26,7 +28,7 @@ export function App() {
 
 hydrate(<App />);
 
-export async function prerender(data) {
+export async function prerender(data: Record<string | number | symbol, never>): Promise<PrerenderResult> {
   const { default: prerender } = await import('preact-iso/prerender');
   return await prerender(<App {...data} />);
 }
