@@ -12,5 +12,5 @@ export default function About({ query }: Props): JSX.Element {
       <p>A page all about this website.</p>
       <pre>{JSON.stringify(query)}</pre>
     </section>
-  )
-};
+  );
+}
