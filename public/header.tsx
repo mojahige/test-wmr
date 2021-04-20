@@ -6,9 +6,7 @@ export default function Header(): JSX.Element {
   return (
     <header>
       <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/error">Error</a>
+        <a href="/">Home</a>        <a href="/about">About</a>        <a href="/error">Error</a>
       </nav>
       <label>
         URL:
