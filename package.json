@@ -8,9 +8,6 @@
     "fix:prettier": "yarn prettier --write './public/**/*.{js,ts,tsx}'",
     "tsc:check": "tsc --noEmit"
 	},
-	"eslintConfig": {
-		"extends": "preact"
-	},
 	"alias": {
 		"react": "preact/compat",
 		"react-dom": "preact/compat"
