@@ -1,13 +1,13 @@
 import { useLocation } from 'preact-iso/router';
 
 export default function Header(): JSX.Element {
-  const { url } = useLocation()
+  const { url } = useLocation();
 
   return (
     <header>
       <nav>
         <a href="/">Home</a>
-        <a href="/about">About</a>{' '}
+        <a href="/about">About</a>
         <a href="/error">Error</a>
       </nav>
       <label>
