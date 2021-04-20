@@ -1,14 +1,17 @@
 {
-  "private": true,
+	"private": true,
 	"scripts": {
 		"start": "wmr",
 		"build": "wmr build --prerender",
 		"serve": "wmr serve",
-    "fix": "yarn fix:eslint && yarn fix:prettier",
-    "fix:eslint": "eslint --fix './public/**/*.{js,ts,tsx}'",
-    "fix:prettier": "yarn prettier --write './public/**/*.{js,ts,tsx}'",
-    "tsc:check": "tsc --noEmit"
+		"fix": "yarn fix:eslint && yarn fix:prettier",
+		"fix:eslint": "eslint --fix './public/**/*.{js,ts,tsx}'",
+		"fix:prettier": "yarn prettier --write './public/**/*.{js,ts,tsx}'",
+		"tsc:check": "tsc --noEmit"
 	},
+  "simple-git-hooks": {
+    "pre-commit": "yarn fix"
+  },
 	"alias": {
 		"react": "preact/compat",
 		"react-dom": "preact/compat"
@@ -24,6 +27,7 @@
 		"@typescript-eslint/parser": "^4.22.0",
 		"eslint-config-prettier": "^8.2.0",
 		"prettier": "^2.2.1",
+		"simple-git-hooks": "^2.3.1",
 		"typescript": "^4.2.4",
 		"wmr": "^1.2.0"
 	}
