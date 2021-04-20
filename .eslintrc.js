@@ -4,7 +4,18 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['preact', 'plugin:@typescript-eslint/recommended', 'prettier'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  extends: ['eslint:recommended', 'prettier'],
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: ['preact', 'plugin:@typescript-eslint/recommended', 'prettier'],
+      rules: {},
+    },
+  ],
 };
