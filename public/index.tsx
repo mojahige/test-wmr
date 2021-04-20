@@ -9,7 +9,7 @@ import type { PrerenderResult } from 'preact-iso/prerender';
 
 const About = lazy(() => import('./pages/about/index.js'));
 
-export function App(): JSX.Element {
+function App(): JSX.Element {
   return (
     <LocationProvider>
       <div class="app">
