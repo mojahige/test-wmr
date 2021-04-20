@@ -32,5 +32,6 @@ export async function prerender(
   data: Record<string | number | symbol, never>
 ): Promise<PrerenderResult> {
   const { default: prerender } = await import('preact-iso/prerender');
+
   return await prerender(<App {...data} />);
 }
