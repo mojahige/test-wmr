@@ -1,9 +1,9 @@
 import hydrate from 'preact-iso/hydrate';
 import { LocationProvider, Router } from 'preact-iso/router';
 import lazy, { ErrorBoundary } from 'preact-iso/lazy';
-import Home from './pages/home/index.js';
-import NotFound from './pages/_404.js';
-import Header from './header.js';
+import Home from './pages/home';
+import NotFound from './pages/_404';
+import Header from './header';
 
 import type { PrerenderResult } from 'preact-iso/prerender';
 
