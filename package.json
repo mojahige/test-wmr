@@ -1,13 +1,15 @@
 {
 	"private": true,
 	"scripts": {
-		"start": "wmr",
-		"build": "wmr build --prerender",
+		"start": "wmr & yarn tcm:watch",
+		"build": "wmr build --prerender && yarn tcm",
 		"serve": "wmr serve",
 		"fix": "yarn fix:eslint && yarn fix:prettier",
 		"fix:eslint": "eslint --fix './public/**/*.{js,ts,tsx}'",
 		"fix:prettier": "yarn prettier --write './public/**/*.{js,ts,tsx}'",
-		"tsc:check": "tsc --noEmit"
+		"tsc:check": "tsc --noEmit",
+    "tcm": "tcm public",
+    "tcm:watch": "tcm public -w"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "yarn fix"
